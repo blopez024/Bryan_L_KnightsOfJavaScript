@@ -1,8 +1,19 @@
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    background-image: 
+        url('./images/arena.avif');
+    background-size: cover; 
+    
 }
 
 #gameOverScreen {
@@ -79,4 +90,20 @@ button {
     color: white;
     font-weight: 600;
     font-size: 24px;
+}
+
+.winner-glow {
+    box-shadow: 0 0 20px 5px gold;
+    border-radius: 50%;
+    animation: glow 1s infinite alternate;
+}
+
+/* https://stackoverflow.com/questions/34821217/easily-create-an-animated-glow */
+@keyframes glow {
+    from {
+        box-shadow: 0 0 20px 5px gold;
+    }
+    to {
+        box-shadow: 0 0 30px 10px yellow;
+    }
 }
